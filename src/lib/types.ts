@@ -29,3 +29,22 @@ export interface PriceHistory {
   prices: [number, number][];
   updatedAt: string;
 }
+
+export interface HalvingInfo {
+  currentBlock: number;
+  targetBlock: number;
+  blocksRemaining: number;
+  estimatedDate: string;
+  avgBlockTimeSec: number;
+  currentReward: number;
+  nextReward: number;
+  updatedAt: string;
+}
+
+export interface PriceAlert {
+  id: string;
+  direction: "above" | "below";
+  targetPrice: number;
+  createdAt: string;
+  triggeredAt: string | null;
+}
